@@ -1,0 +1,45 @@
+/*
+Ishraq Bhuiyan
+SoftDev2 pd 3
+HW 1a Stretch Out Your Canvas
+2016-02-11
+*/
+
+var canvas = document.getElementById("ftb2maga");
+var ctx = canvas.getContext('2d');
+
+//Sets the Fill of drawn things to Green
+ctx.fillStyle = "#00FF00";
+//Draws a rectangle with upper left hand corner at 0,0 with height and width 538 and fill of Green
+ctx.fillRect(0,0,538,538);
+//Sets the style of strokes/outlines to black
+ctx.strokeStyle = "#000000";
+//creates a rectangle with an outline with similar parameters to fillRect
+ctx.strokeRect(20,20,150, 150);
+//fillestyle to black and strokestyle to red
+ctx.fillStyle = "#000000";
+ctx.strokeStyle = "#FF0000";
+//Starts a new drawing
+ctx.beginPath();
+//Sets the start position of a drawing
+ctx.moveTo(40,40);
+//draws a line from start position
+ctx.lineTo(70, 100);
+ctx.lineTo(80, 150);
+//closes the drawing path
+ctx.closePath();
+//Fills the area closed by path to color of fillestyle
+ctx.fill()
+//strokes the lines
+ctx.stroke();
+ctx.beginPath();
+//Draws an arc of center 150,150, radius 50, starting angle of 0, ending angle of 2pi radians
+ctx.arc(150,150,50,0,Math.PI * 2);
+//strokes and fills the outline
+ctx.stroke();
+ctx.fill();
+
+//sets the font
+ctx.font = "2pc arial";
+//writes the text, with start position of 100, 500
+ctx.fillText("Hello I am writing stuff", 100, 500);
