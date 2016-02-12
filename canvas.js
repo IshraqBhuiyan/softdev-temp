@@ -1,11 +1,14 @@
 var canvas = document.getElementById("ftb2maga");
 var ctx = canvas.getContext('2d');
+var button = document.getElementById("clear");
 
-function makeDots(event){
+ctx.strokeStyle = "#000000";
+ctx.strokeRect(0,0, 538, 538);
+
+ctx.fillStyle = "#FF0000";
+
+var makeDots = function(e){
 }
 
-//Sets the stroke to black
-ctx.strokeStyle = "#000000";
-//Draws a rectangle with upper left hand corner at 0,0 with height and width 538 and fill of Green
-ctx.strokeRect(0,0, 538, 538);
+ctx.addEventListener("mousedown", makeDots, false);
 
